@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+  .dashboard__metric-value {line-height: 1; padding-right: 50px}
+  a.counter-carer {color: #912b88; text-decoration: none;}
+  a.counter-carer:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+  a.counter-eligibility {text-decoration: none;}
+  a.counter-eligibility:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+  a.counter-pay {color: #85994b; text-decoration: none;}
+  a.counter-pay:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+  a.counter-notify{color: #005ea5; text-decoration: none;}
+  a.counter-notify:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+</style>
+
+<div class="govuk-width-container">
+<main class="govuk-main-wrapper">
+<div id="content">
+    <div class="inner-block cf js-search-filter" style="max-width: 1440px">
+      <div class="govuk-grid-row">
+
+
+            <div class="govuk-grid-column-one-third">
+              <p class="main-nav">Home</p>
+            </div>
+
+
+          <a href="to-do-list">
+            <div class="govuk-grid-column-one-third">
+              <p class="main-nav-active">To-do list</p>
+            </div>
+          </a>
+
+          <a href="journal">
+            <div class="govuk-grid-column-one-third">
+              <p class="main-nav-active">Journal</p>
+            </div>
+          </a>
+        </div>
+        <br>
+        <p class="govuk-body">Your next statement is due in 5 days.</p>
+        <p class="govuk-body">How much you'll get will depend on your circumstances from 12 November 2018 to 12 January 2018.</p>
+        <br>
+
+        <div class="govuk-grid-row">
+
+          <a href="">
+            <div class="govuk-grid-column-one-half">
+              <p class="main-ctas">Report a change
+              <span class="main-ctas-subline"><br>of circumstances</span></p>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="govuk-grid-column-one-half">
+              <p class="main-ctas">Report a fit note</p>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="govuk-grid-column-one-half">
+              <p class="main-ctas">Add a note
+              <span class="main-ctas-subline"><br>to you journal</span></p>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="govuk-grid-column-one-half">
+              <p class="main-ctas">View to-do list</p>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="govuk-grid-column-one-half">
+              <p class="main-ctas">My commitments</p>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="govuk-grid-column-one-half">
+              <p class="main-ctas">Payments</p>
+            </div>
+          </a>
+
+          <a href="guide">
+            <div class="govuk-grid-column-one-half">
+              <p class="main-ctas">Guide</p>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="govuk-grid-column-one-half">
+              <p class="main-ctas" width="10%">Job applications <span class="main-ctas-subline"><br>interested, applied, interviewing</span></p>
+            </div>
+          </a>
+
+        </div>
+
+        <br>
+        <h2 class="govuk-heading-l">Your commitments</h2>
+          <p class="govuk-body">This is what you've agreed to do in order to receive Universal Credit.</p>
+          <h4 class="govuk-heading-s">It's important to know that in return for Universal Credit there are some things you'll need to do.
+          Your work coach will discuss and agree these with you.</h4>
+
+
+          <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Could we improve this page?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+
+              </div>
+          </details>
+
+
+
+    </main>
+  </div>
+
+
+
+{% endblock %}

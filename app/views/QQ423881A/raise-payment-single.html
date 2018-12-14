@@ -1,0 +1,192 @@
+{% extends "layout.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+
+<a href="check-eligibility-single" class="govuk-back-link">Back</a>
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="case-header">
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+        <span class="govuk-caption-l">Claimant details</span>
+        QQ423881A
+      </h1>
+      <p class="govuk-body"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61" target="_blank">View claimant in Universal Credit</a></p>
+      <strong class="govuk-tag">raise payment - single</strong>
+
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <hr>
+
+          <h3 class="govuk-heading-l">The claimant is eligible for a single payment of SDP</h3>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+
+
+
+              <div class="govuk-width-container">
+
+                <main class="govuk-main-wrapper">
+
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                      <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                          <tr class="govuk-table__row">
+                            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Monthly SDP rate</th>
+                            <th class="govuk-table__header govuk-table__header--numeric" scope="col">First UC claim date</th>
+                            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Last AP ended</th>
+                            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Full APs since first UC claim date</th>
+                            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Single payment amount</th>
+                          </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-table__cell--numeric">£80</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">1 August 2016</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">31 August 2018</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">25</td>
+                            <td class="govuk-table__header govuk-table__cell--numeric" scope="row">£2,000</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+
+
+                  <h3 class="govuk-heading-m govuk-!-margin-top-2">Do you want raise a payment for £2,000 in CPS?</h3>
+
+
+                  <p class="govuk-body">You'll need to follow the guidance for raising and authorising a payment of SDP in CPS.</p>
+
+                  {% set speakClaimantNo %}
+
+                     Eligibility checks will need to be made again <br>
+
+                    {{ govukButton({
+                      text: 'Save and continue',
+                      href: 'check-eligibility-single',
+                      classes: 'govuk-button'
+                    }) }}
+                  {% endset -%}
+
+                  {% set checkEligibiltySingle %}
+
+                    {{ govukButton({
+                      text: 'Save and continue',
+                      href: 'check-eligibility-single',
+                      classes: 'govuk-button'
+                    }) }}
+
+                  {% endset -%}
+
+                  {% set notifyMoneyNo %}
+                    {{ govukButton({
+                      text: 'Save and continue',
+                      href: 'notify-claimant-no',
+                      classes: 'govuk-button'
+                    }) }}
+
+                  {% endset -%}
+
+                  {% set carerHtml %}
+                    {{ govukRadios({
+                      idPrefix: "has-carer-conditional",
+                      name: "has-carer",
+                      fieldset: {
+                        legend: {
+                          text: "This payment will be sent for authorisation",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
+                        }
+                      },
+                      items: [
+
+                      ]
+                    }) }}
+
+                    {{ govukButton({
+                      text: 'Save and continue',
+                      href: '/dashboards/agent-dashboard',
+                      classes: 'govuk-button'
+                    }) }}
+
+                  {% endset -%}
+
+                  {{ govukRadios({
+                    idPrefix: "speak-claimant-conditional",
+                    name: "speak-claimant",
+                    fieldset: {
+                      legend: {
+                        text: "",
+                        isPageHeading: false,
+                        classes: "govuk-fieldset__legend--m"
+
+                      }
+                    },
+
+                    items: [
+                      {
+                        value: "no",
+                        text: "No",
+                        conditional: {
+                          html: speakClaimantNo
+                        }
+                      },
+                      {
+                        value: "yes",
+                        text: "Yes",
+                        conditional: {
+                          html: carerHtml
+                        }
+                      }
+                    ]
+                  }) }}
+
+                </main>
+              </div>
+            </div>
+
+
+
+            <p class="govuk-body govuk-!-margin-top-8"></p>
+
+
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+            <p class="govuk-body govuk-!-margin-top-6"></p>
+            <div class="app-related-items">
+              <h2 class="govuk-heading-s">
+                Actions
+              </h2>
+              <ul class="govuk-list govuk-body-s">
+                <li><a href="raise-payment-single-history" class="govuk-link">Case history</a></li>
+              </ul>
+
+              <p class="govuk-body govuk-!-margin-top-6"></p>
+
+            </div>
+          </div>
+
+        </ul>
+
+
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+
+
+{% endblock %}
